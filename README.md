@@ -12,3 +12,5 @@ Test :
 Production : 
 `gulp` to build
 `gulp serve:dist` to preview the build
+
+Preview : http://sioanis.com/build/
