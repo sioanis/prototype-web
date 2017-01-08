@@ -5,11 +5,17 @@
 //  ------
 
 var elementsOnPage = '.form-signin, .matches, .landing',
+    loginElements  = '.sign-in, .sign-up',
     navItem        = 'nav li';
 
 function formSubmission() {
   $('.form-signin, .form-signup, .landing').addClass('hide');
   $('.matches').removeClass('hide');
+}
+
+function showMain() {
+  $('.landing').toggleClass('hide');
+  $('.navbar,.page-content').toggleClass('hide');
 }
 
 function switchViews() {
@@ -30,5 +36,7 @@ function switchViews() {
   }
 }
 
+
 $(navItem).click(switchViews);
-$('.sign-in, .sign-up').click(formSubmission);
+$(loginElements).click(formSubmission);
+$('.landing .item, .navbar-brand').click(showMain);
