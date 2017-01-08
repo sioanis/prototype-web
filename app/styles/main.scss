@@ -56,6 +56,7 @@ $triangle-size: 100px;
   border-bottom: solid $triangle-size $blue; // draw css triangle
   border-left: solid $triangle-size transparent;
   border-right: solid $triangle-size transparent;
+  cursor: pointer;
   .short-name, .long-name {
     text-align: center;
     position: absolute;
@@ -102,7 +103,7 @@ body > .container.landing {
       font-size: 5rem;
     }
     .content {
-      min-height: 200px;
+      min-height: 172px;
       border: 1px #333 solid;
       .title, i {
         width: 49.2%;
@@ -110,12 +111,22 @@ body > .container.landing {
         display: inline-block;
       }
       i {
-        padding: 20% 0;
+        padding: 60px 0;
         background: $blue;
+        @media (max-width: 438px) {
+          background: none; // to do: standardize this to something normal
+        }
       }
     }
     &:last-child .content i {
       background: $pink;
+      @media (max-width: 438px) {
+        background: none; // to do: standardize this to something normal
+      }
+    }
+    @media (max-width: 991px) { // to do: standardize this to something normal
+      margin: 0 0 2rem;
+      width: 100%;
     }
   }
 }

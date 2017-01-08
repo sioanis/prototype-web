@@ -109,6 +109,39 @@
         <button class="btn btn-lg btn-primary btn-block sign-up" type="submit">Sign up</button>
         <p>Already a member? <a href="#">Login</a></p>
       </form>
+
+      <!-- Image Upload -->
+      <form class="image-upload hide">
+        <div class="form-group">
+          <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left">Upload image</h3>
+              <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default active">File</button>
+                <button type="button" class="btn btn-default">URL</button>
+              </div>
+            </div>
+            <div class="file-tab panel-body">
+              <div>
+                <button type="button" class="btn btn-default btn-file">
+                <span>Browse</span>
+                <input type="file" name="file-input">
+                </button>
+                <button type="button" class="btn btn-default">Remove</button>
+              </div>
+            </div>
+            <div class="url-tab panel-body">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Image URL">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default">Submit</button>
+                </div>
+              </div>
+              <input type="hidden" name="url-input">
+            </div>
+          </div>
+        </div>
+      </form>
       
       <!-- Begin page content -->
       <div class="row text-center matches hide">

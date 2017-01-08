@@ -4,13 +4,13 @@
 // maintainable framework - for demo.
 //  ------
 
-var elementsOnPage = '.form-signin, .matches, .landing',
+var elementsOnPage = '.form-signin, .form-signup, .image-upload, .landing',
     loginElements  = '.sign-in, .sign-up',
     navItem        = 'nav li';
 
 function formSubmission() {
-  $('.form-signin, .form-signup, .landing').addClass('hide');
-  $('.matches').removeClass('hide');
+  $(elementsOnPage).addClass('hide');
+  $('.image-upload').removeClass('hide');
 }
 
 function showMain() {
@@ -23,14 +23,15 @@ function switchViews() {
   $(this).addClass('active');
   
   var className = $(this).hasClass('signup') ? 'signup' : 'login';
-
   switch(className) {
     case 'signup' : 
       $(elementsOnPage).addClass('hide');
       $('.form-signup').removeClass('hide');
+      break;
     case 'login' : 
       $(elementsOnPage).addClass('hide');
       $('.form-signin').removeClass('hide');
+      break;
     default: 
       break;
   }
