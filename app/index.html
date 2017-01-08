@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>prototype</title>
+    <title>Share Mono</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -27,10 +28,28 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- This is super crude I'm gonna eventually convert this to a more maintainable framework. -->
+    <!-- This is super crude I'm gonna eventually convert this to a more maintainable framework with seperate component. -->
     
+      <!-- Landing Page -->
+      <div class="container landing">
+        <div class="row">
+          <div class="col-md-12 inner">
+            <div class="logo">
+              <div class="short-name">SM</div>
+              <div class="long-name"> - Share Mono - </div>
+            </div>
+          </div>
+          <div class="item col-md-6">
+            <div class="content">Online <i class="fa fa-laptop" aria-hidden="true"></i></div>
+          </div>
+          <div class="item col-md-6">
+            <div class="content">Personal Shopper <i class="fa fa-handshake-o" aria-hidden="true"></i></div>
+          </div>
+        </div>
+      </div>
+
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top hide">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -39,7 +58,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Prototype</a>
+          <a class="navbar-brand" href="#">Share Mono</a>
         </div>
         <form class="navbar-form navbar-left">
           <div class="form-group">
@@ -49,7 +68,7 @@
         </form>
         <div class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">
-            <li class="active login"><a href="#">Login</a></li>
+            <li class="login"><a href="#">Login</a></li>
             <li class="signup"><a href="#">Sign Up</a></li>
           </ul>
         </div>
@@ -58,7 +77,9 @@
 
     <!-- Begin page content -->
     <div class="container">
-      <form class="form-signin">
+
+      <!-- Sign In -->
+      <form class="form-signin hide">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
@@ -72,6 +93,7 @@
         <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">Sign in</button>
       </form>
 
+      <!-- Sign Up -->
       <form class="form-signup hide">
         <h2 class="form-signin-heading">Please sign up</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
@@ -82,67 +104,13 @@
         <p>Already a member? <a href="#">Login</a></p>
       </form>
       
+      <!-- Begin page content -->
       <div class="row text-center matches hide">
-        <div class="col-lg-12">
-            <h3>Your Matches</h3>
-        </div>
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="http://placehold.it/800x500" alt="">
-                <div class="caption">
-                    <h3>Feature Label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>
-                        <a href="#" class="btn btn-primary">Message!</a> <a href="#" class="btn btn-default">More Info</a>
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="http://placehold.it/800x500" alt="">
-                <div class="caption">
-                    <h3>Feature Label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>
-                        <a href="#" class="btn btn-primary">Message!</a> <a href="#" class="btn btn-default">More Info</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="http://placehold.it/800x500" alt="">
-                <div class="caption">
-                    <h3>Feature Label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>
-                        <a href="#" class="btn btn-primary">Message!</a> <a href="#" class="btn btn-default">More Info</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="http://placehold.it/800x500" alt="">
-                <div class="caption">
-                    <h3>Feature Label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <p>
-                        <a href="#" class="btn btn-primary">Message!</a> <a href="#" class="btn btn-default">More Info</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        </div>
-
+      </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <p class="text-muted">Footer content here.</p>
       </div>
